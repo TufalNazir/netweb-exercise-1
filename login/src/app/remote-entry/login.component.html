@@ -1,0 +1,30 @@
+<div class="min-h-screen min-w-screen flex flex-column justify-content-center align-items-center bg-blue-50">
+  <div class="w-28rem shadow-1 border-round bg-white py-3 px-2">
+    <div class="flex h-full flex-column">
+      <div class="p-3">
+        <div class="text-xl mb-1">Login</div>
+        <div class="text-gray-500 text-sm">into your organization</div>
+      </div>
+      <div class="h-full flex-grow-1 p-3">
+        <form [formGroup]="loginForm">
+          <div class="flex flex-column gap-2">
+            <label for="username">Username <sup class="text-red-500">*</sup></label>
+            <input placeholder="example@netweb.com" formControlName="username" pInputText id="username"
+                   aria-describedby="username-help" />
+          </div>
+
+          <div class="flex flex-column gap-2 mt-3">
+            <label for="password">Password <sup class="text-red-500">*</sup></label>
+            <input formControlName="password" type="password" pInputText id="password"
+                   aria-describedby="password-help" />
+          </div>
+
+          <div class="mt-4">
+            <button (click)="onClickOfLogin()" pButton class="w-full" label="Login"></button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<navbar></navbar>
+<div class="px-4">
+  <h1>Students</h1>
+  <div class="mt-4">
+    <p-table [value]="students">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Student Id</th>
+          <th>Full Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-student>
+        <tr>
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.age }}</td>
+          <td>{{ student.grade }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

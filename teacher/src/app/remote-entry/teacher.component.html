@@ -1,0 +1,22 @@
+<navbar></navbar>
+<div class="px-4">
+  <h1>Teachers</h1>
+  <p-table [value]="teachers">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Full Name</th>
+        <th>Exp(years)</th>
+        <th>Department</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-teacher>
+      <tr>
+        <td>{{ teacher.name }}</td>
+        <td>{{ teacher.exp }}</td>
+        <td>{{ teacher.department }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+
